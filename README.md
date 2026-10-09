@@ -30,7 +30,7 @@
 
 ```
 claude-dd-report/
-├── skills/dd-report/SKILL.md      ← 核心技能 v6.15（约120KB 铁律库：全部由真实返工事故沉淀）
+├── skills/dd-report/SKILL.md      ← 核心技能 v6.16（约120KB 铁律库：全部由真实返工事故沉淀）
 ├── agents/dd-expert.md            ← 尽调统筹专家 Agent（企查查全域 MCP 编排）
 ├── workflows/DD-SOP-004           ← 全流程 SOP v2.0：七阶段驾驶视图（接单→底稿→初稿→门禁→批注轮→手改轮→外部意见）
 ├── tools/                         ← 16 个工具脚本（Python，开箱即用）

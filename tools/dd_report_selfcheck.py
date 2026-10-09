@@ -289,8 +289,11 @@ def main():
                     get[key] = _num(cells)
         if '现金周转期' not in get:
             continue
-        if None in get.values():
-            WARN('表%d 含现金周转期但三周转天数取不全，人工复算：%s' % (i, get))
+        missing = [k for k in ('应收账款周转天数', '存货周转天数', '应付账款周转天数')
+                   if k not in get or get[k] is None]
+        if missing:
+            WARN('表%d 含现金周转期但周转天数取不全（缺%s，或该表本无此行），人工复算：%s'
+                 % (i, '/'.join(missing), get))
             ccc_checked += 1
             continue
         ccc_checked += 1
