@@ -1,0 +1,9 @@
+{
+  "name": "claude-dd-report",
+  "version": "6.15.0",
+  "description": "AI 风控授信尽调报告生成系统：content.json 一键构建格式规范、勾稽可复算的尽调报告 docx；11 项交付门禁；修订模式手术原语库；批注驱动修订闭环。",
+  "author": "Wu Yang",
+  "license": "MIT",
+  "skills": ["skills/dd-report"],
+  "agents": ["agents/dd-expert.md"]
+}

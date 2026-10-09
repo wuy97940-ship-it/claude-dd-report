@@ -1,0 +1,45 @@
+# 尽调偏好配置样例（preferences.example.yaml）
+# 用法：复制为贵司的 preferences.yaml，按自身口径修改；
+# SKILL/SOP 中"读偏好 due_diligence 组"即读取本文件。
+due_diligence:
+  # ── 格式规范 ──
+  fonts:
+    east_asia: 宋体            # 中文字体
+    ascii: Times New Roman     # 数字与西文（铁律：漏网根因常是主题字体"等线"）
+    body_size_pt: 12           # 正文小四
+    table_size_pt: 9           # 表格字号
+    circled_hint_eastasia: true # ①②③ run 必须带 w:hint=eastAsia
+  paragraph:
+    line_spacing: 1.5
+    first_line_indent_chars: 2
+    justify: true
+  table:
+    style: 三线表               # 顶线1.5pt+底线2.25pt+内部细线，无左右边线
+    autofit_window: true        # 所有表格按窗口自动调整
+    rank_desc: true             # 排名表一律金额降序+合计行
+    caption_paragraph: false    # ⚡不加"表N：xxx"题注段；单位=独立右对齐段置表上方
+  bold_rules: 意见区与关键风险结论句可加粗；数据叙述段一律不加粗；只有章节标题加粗
+
+  # ── 口径纪律 ──
+  caliber:
+    turnover_days: 平均余额     # 周转天数一律平均余额口径（半年度180天），可比公司同口径
+    toc_refresh: 终审人自刷     # 目录由终审人自己在Word里刷新，AI不代刷
+    payment_terms_consistency: true  # 账期口径以批复为准：文件名/标题/意见区/正文/总结五处同口径
+    stale_value_scan: true      # 口径变更后枚举废弃值全部表述形式扫描（千分位/亿/万/中文数字）
+
+  # ── 流程纪律 ──
+  workflow:
+    scope_lock_before_edit: true   # 改报告前锁范围：本次只改什么，超范围一律回退
+    derived_numbers_zero_typing: true  # 派生数字零手敲：脚本输出直接复制+指纹扫描
+    selfcheck_gate: true           # 交付前必跑 selfcheck，FAIL 不得交付
+    render_inspect_on_surgery: true # 修订手术后渲染目检（文字重复/格式突变只有渲染能看见）
+    backup_before_surgery: true    # 手术前备份到 _workN_日期/
+    comment_first_dump: true       # 批注清理前必先dump（批注意图=抢救需求的唯一通道）
+
+  # ── 写作纪律 ──
+  writing:
+    opinion_area: 意见决断导向      # 意见区七条落点=风控决断，分列授信主体与担保主体财务简况
+    no_packaged_conclusion: true   # 禁打包结论（"总体可控"类）
+    stress_test_monotonic: true    # 压力测试三档单调：悲观<基准<乐观
+    dunhao_rule: 顿号只连并列词语   # 主谓小句之间一律逗号
+    remark_style: "备注：独立引导行+分项成段；只写口径/公式/事实；删推演与软性提示"

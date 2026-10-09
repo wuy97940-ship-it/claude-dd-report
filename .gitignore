@@ -1,0 +1,10 @@
+# 工作产物与临时文件
+_work*/
+*.pyc
+__pycache__/
+.DS_Store
+Thumbs.db
+# 脱敏工作脚本（维护者本地用，不入库）
+_sanitize.py
+.pytest_cache/
+__pycache__/
